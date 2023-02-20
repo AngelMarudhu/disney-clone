@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
-import { auth, provider } from "./firebase";
+import { auth, provider } from './firebase';
 
 const Header = (props) => {
   const googleHandler = () => {
@@ -19,31 +19,31 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="/images/logo.svg" alt="Disney+"></img>
+        <img src='/images/logo.svg' alt='Disney+'></img>
       </Logo>
       <NavMenu>
         <a>
-          <img src="/images/home-icon.svg" alt=""></img>
+          <img src='/images/home-icon.svg' alt=''></img>
           <span>HOME</span>
         </a>
         <a>
-          <img src="/images/search-icon.svg" alt=""></img>
+          <img src='/images/search-icon.svg' alt=''></img>
           <span>SEARCH</span>
         </a>
         <a>
-          <img src="/images/watchlist-icon.svg" alt=""></img>
+          <img src='/images/watchlist-icon.svg' alt=''></img>
           <span>WATCHLIST</span>
         </a>
         <a>
-          <img src="/images/original-icon.svg" alt=""></img>
+          <img src='/images/original-icon.svg' alt=''></img>
           <span>ORIGINALS</span>
         </a>
         <a>
-          <img src="/images/movie-icon.svg" alt=""></img>
+          <img src='/images/movie-icon.svg' alt=''></img>
           <span>MOVIES</span>
         </a>
         <a>
-          <img src="/images/series-icon.svg" alt=""></img>
+          <img src='/images/series-icon.svg' alt=''></img>
           <span>SERIES</span>
         </a>
       </NavMenu>
@@ -72,7 +72,7 @@ const Logo = styled.a`
   max-height: 70px;
   font-size: 0;
   display: inline-block;
-
+  cursor: pointer;
   img {
     display: block;
     width: 100%;
@@ -95,6 +95,7 @@ const NavMenu = styled.div`
     display: flex;
     align-items: center;
     padding: 0 12px;
+    cursor: pointer;
     img {
       height: 20px;
       min-width: 20px;
@@ -112,7 +113,7 @@ const NavMenu = styled.div`
         background-color: rgb(249, 249, 249);
         border-radius: 0px 0px 4px 4px;
         bottom: -6px;
-        content: "";
+        content: '';
         height: 2px;
         opacity: 0;
         position: absolute;
